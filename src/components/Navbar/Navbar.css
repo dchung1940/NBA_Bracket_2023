@@ -1,0 +1,37 @@
+.navbar {
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height:40px;
+    min-width:100vw;
+    font-size: 1.2em;
+    height:5vh;
+    background-color: black;
+    font-family: Gill Sans, sans-serif;
+}
+
+.navbar li{
+    list-style-type: none;
+    display:inline-block;
+    padding:0 1rem;
+}
+.navbar li a{
+    color:white;
+    text-decoration: none;
+}
+
+.navbar a:hover{    
+    color:gray;
+}
+
+.navbar a:active{
+    color:white;
+    text-decoration: underline;
+}
+
+.active{
+    color:white;
+    text-decoration:underline;
+}

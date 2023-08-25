@@ -1,0 +1,24 @@
+.searchTable{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:250px;
+    height:250px;
+    border:1px solid #e4e4e4;
+    border-radius:3px;
+}
+/* .searchTable-search{
+    height:10%;
+    width:100%;
+} */
+.searchTable-table{
+
+    height:300px;
+    overflow:scroll;
+    width:100%;
+    height:90%;
+    display:flex;
+    flex-direction:column;
+}

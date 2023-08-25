@@ -1,0 +1,9 @@
+.about{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about p{
+    text-align: center;
+}
