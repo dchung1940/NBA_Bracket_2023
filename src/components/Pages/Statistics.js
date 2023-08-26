@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import East from "../../data/East.mjs";
 import West from "../../data/West.mjs";
 import "./style/Statistics.css";
@@ -10,7 +10,7 @@ function Statistics() {
     return data.map((props,index) => (
       <tr key = {index}>
         <td>
-          <img src={props.team.logo}></img>
+          <img src={props.team.logo} alt = {props.team.name}></img>
           {props.conference.rank + " " + props.team.name}
         </td>
         <td>{props.win.total}</td>

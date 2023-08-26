@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./style/Login.css";
 import { useTheme, useThemeUpdate } from "../../../ThemeContext";
 
@@ -14,9 +14,9 @@ function Login() {
   }
 
   function clickHandler(name) {
-    if (name == "get" && user.length == 6) {
+    if (name === "get" && user.length === 6) {
       get(false);
-    } else if (name == "post" && user.length == 6) {
+    } else if (name === "post" && user.length === 6) {
       post();
     } else {
       setMessage("Please enter 6 digit ID");
@@ -50,7 +50,7 @@ function Login() {
   async function post() {
     const element = await get(true);
     if (element !== "ID Taken") {
-      const response = await fetch(
+      await fetch(
         "https://mywebsite-da18e.firebaseio.com/playoff.json",
         {
           method: "POST",

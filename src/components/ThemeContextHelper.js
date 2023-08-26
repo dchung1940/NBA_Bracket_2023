@@ -1,7 +1,7 @@
 function addFirstRound(setPlayoff,round, conf, team) {
     setPlayoff((prevState) => {
       const found = prevState[round].indexOf("");
-      if (found != -1) {
+      if (found !== -1) {
         prevState[round][found] = team;
         prevState[conf] += 1;
       }
@@ -15,7 +15,7 @@ function addFirstRound(setPlayoff,round, conf, team) {
         let temp = array[i];
         const found = prevState[temp].indexOf(team);
 
-        if (found != -1) {
+        if (found !== -1) {
           prevState[temp][found] = "";
         } else {
           break;
@@ -36,7 +36,7 @@ function addFirstRound(setPlayoff,round, conf, team) {
       for (let i = 1; i < array.length; ++i) {
         let temp = array[i];
         let value = prevState[temp][curr_index];
-        if (value == old_team) {
+        if (value === old_team) {
           prevState[temp][curr_index] = "";
           curr_index = Math.floor(curr_index / 2);
         } else {
@@ -54,7 +54,7 @@ function addFirstRound(setPlayoff,round, conf, team) {
       for (let i = 0; i < array.length; ++i) {
         let temp = array[i];
         let value = prevState[temp][curr_index];
-        if (value == team) {
+        if (value === team) {
           prevState[temp][curr_index] = "";
           curr_index = Math.floor(curr_index / 2);
         } else {

@@ -12,7 +12,7 @@ function SearchTable(props) {
         <SearchBar setSearch={setSearch} />
       <div className="searchTable-table">
         {props.data.filter((value) => {
-          if (search == "") {
+          if (search === "") {
             return value;
           }
           return value.team.name.toLowerCase().includes(search.toLowerCase());

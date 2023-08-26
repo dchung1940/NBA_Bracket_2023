@@ -55,7 +55,7 @@ function ThemeProvider(props) {
     let index_ = Math.floor(index / 2);
     const array = ["quarterEast", "semiEast", "finalEast", "Champion"];
 
-    if (playoff["firstEast"][index] != playoff["quarterEast"][index_]) {
+    if (playoff["firstEast"][index] !== playoff["quarterEast"][index_]) {
       addRound(setPlayoff,"quarterEast", index_, team, array);
     } else {
       removeRound(setPlayoff,index_, array, team);
@@ -67,7 +67,7 @@ function ThemeProvider(props) {
     let index_ = Math.floor(index / 2);
     const array = ["quarterWest", "semiWest", "finalWest", "Champion"];
 
-    if (playoff["firstWest"][index] != playoff["quarterWest"][index_]) {
+    if (playoff["firstWest"][index] !== playoff["quarterWest"][index_]) {
       addRound(setPlayoff,"quarterWest", index_, team, array);
     } else {
       removeRound(setPlayoff,index_, array, team);
@@ -79,7 +79,7 @@ function ThemeProvider(props) {
     let index_ = Math.floor(index / 2);
     const array = ["semiEast", "finalEast", "Champion"];
 
-    if (playoff["quarterEast"][index] != playoff["semiEast"][index_]) {
+    if (playoff["quarterEast"][index] !== playoff["semiEast"][index_]) {
       addRound(setPlayoff,"semiEast", index_, team, array);
     } else {
       removeRound(setPlayoff,index_, array, team);
@@ -91,7 +91,7 @@ function ThemeProvider(props) {
     let index_ = Math.floor(index / 2);
     const array = ["semiWest", "finalWest", "Champion"];
 
-    if (playoff["quarterWest"][index] != playoff["semiWest"][index_]) {
+    if (playoff["quarterWest"][index] !== playoff["semiWest"][index_]) {
       addRound(setPlayoff,"semiWest", index_, team, array);
     } else {
       removeRound(setPlayoff,index_, array, team);
@@ -103,7 +103,7 @@ function ThemeProvider(props) {
     let index_ = Math.floor(index / 2);
     const array = ["finalEast", "Champion"];
 
-    if (playoff["semiEast"][index] != playoff["finalEast"][index_]) {
+    if (playoff["semiEast"][index] !== playoff["finalEast"][index_]) {
       addRound(setPlayoff,"finalEast", index_, team, array);
     } else {
       removeRound(setPlayoff,index_, array, team);
@@ -115,7 +115,7 @@ function ThemeProvider(props) {
     let index_ = Math.floor(index / 2);
     const array = ["finalWest", "Champion"];
 
-    if (playoff["semiWest"][index] != playoff["finalWest"][index_]) {
+    if (playoff["semiWest"][index] !== playoff["finalWest"][index_]) {
       addRound(setPlayoff,"finalWest", index_, team, array);
     } else {
       removeRound(setPlayoff,index_, array, team);

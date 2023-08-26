@@ -57,7 +57,7 @@
   .bracket-tournament {
     order: -1;
     min-height:300px;
-    /* ? Ask David about size and how parts of tournament disappears */
+    /* ? Ask David about size and why parts of tournament disappears */
   }
   .bracket-search {
     display: flex;

@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {useTheme,useThemeUpdate} from "../../../ThemeContext"
+import React from 'react'
+import {useThemeUpdate} from "../../../ThemeContext"
 
 import "./style/Team.css"
 
@@ -19,25 +19,25 @@ function Team(props){
 
     function clickHandler(){
 
-        if(props.conf == "firstEast"){
+        if(props.conf === "firstEast"){
             updateQuarterEast(props.index,props.name)
         }
-        else if (props.conf == "firstWest"){
+        else if (props.conf === "firstWest"){
             updateQuarterWest(props.index,props.name)
         }
-        else if (props.conf == "quarterEast"){
+        else if (props.conf === "quarterEast"){
             updateSemiEast(props.index,props.name)
         }
-        else if (props.conf == "quarterWest"){
+        else if (props.conf === "quarterWest"){
             updateSemiWest(props.index,props.name)
         }
-        else if (props.conf == "semiEast"){
+        else if (props.conf === "semiEast"){
             updateFinalEast(props.index,props.name)
         }
-        else if (props.conf == "semiWest"){
+        else if (props.conf === "semiWest"){
             updateFinalWest(props.index,props.name)
         }
-        else if (props.conf == "finalEast" || props.conf == "finalWest")
+        else if (props.conf === "finalEast" || props.conf === "finalWest")
         {
             updateChampion(props.name)
         }
@@ -47,7 +47,7 @@ function Team(props){
     return(
         <div className = {"team"} onClick = {clickHandler}>
             
-            <img src = {props.image}/> 
+            <img src = {props.image} alt = {props.name}/> 
             <span>{props.nickname}</span>
             
         </div>
