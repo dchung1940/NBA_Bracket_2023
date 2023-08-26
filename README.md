@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+# NBA Playoff Bracket 2023
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a project built for people who want to create a bracket for predicting NBA playoff. 
 
-## Available Scripts
+People can build their project from scratch, commit their project with a unique ID, and fetch their prediction using the unique ID.
 
-In the project directory, you can run:
+!(picture)[./NBA_Bracket.png]
 
-### `npm start`
+There are two search lists, with each search list showing teams in the Eastern Conference or Western Conference.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Upon clicking teams in the search list, the user can progress their bracket by clicking on the teams that will show in the bracket.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The user can save their progress at anytime by entering a unique 6 letter ID and clicking "Post" button. If the unique ID is not in the database and is unique, the progress will be saved and the message of "Post Successful" will show. However, if the ID is already stored in the database and is not unique, the user may use another ID. To help the users generate a unique ID, the user can click the Random Button to get a unique 6 letter ID.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The user can  fetch their bracket by entering the unique ID the user used to store the bracket and clicking "Get" button. If the unique ID has been saved in the past, then the message "Success" will show
