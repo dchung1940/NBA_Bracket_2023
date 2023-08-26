@@ -4,7 +4,7 @@ This is a project built for people who want to create a bracket for predicting N
 
 People can build their project from scratch, commit their project with a unique ID, and fetch their prediction using the unique ID.
 
-!(picture)[./NBA_Bracket.png]
+![picture](./NBA_Bracket.png)
 
 There are two search lists, with each search list showing teams in the Eastern Conference or Western Conference.
 
