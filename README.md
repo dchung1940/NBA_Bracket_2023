@@ -1,6 +1,6 @@
 # NBA Playoff Bracket 2023
 
-This is a project built for people who want to create a bracket for predicting NBA playoff. 
+This is a project built for NBA fans who want to create their own NBA playoff bracket prediction and easily share with other people.
 
 People can build their project from scratch, commit their project with a unique ID, and fetch their prediction using the unique ID.
 
