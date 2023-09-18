@@ -9,6 +9,9 @@ function TableEntry(props) {
 
   // ? Are we supposed to destructure props for useEffect? React gives me warning for this
   // https://stackoverflow.com/questions/55228102/is-not-including-all-dependencies-in-the-useeffect-dependency-array-an-anti-patt
+ 
+  
+
   useEffect(()=>{
     if (props.conf_data.includes(props.name)){
         setClicked(true)

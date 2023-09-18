@@ -7,7 +7,7 @@ function Converter(data,filename){
     data = JSON.stringify(data);
         
     // Write data in 'Output.txt' .
-    fs.writeFile(filename, data, (err) => {
+    fs.writeFileSync(filename, data, (err) => {
         // In case of a error throw err.
         if (err) throw err;
     })
