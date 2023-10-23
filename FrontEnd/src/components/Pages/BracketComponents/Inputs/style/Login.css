@@ -26,6 +26,7 @@
   font-size: 15px;
   margin-top: 10px;
   flex-basis:20px;
+  text-align:center
 }
 .hidden {
   visibility: hidden;

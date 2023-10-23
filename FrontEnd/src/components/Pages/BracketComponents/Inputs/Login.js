@@ -34,10 +34,11 @@ function Login() {
     const response = await fetch(URL);
     const data = await response.json();
 
-    if (data["success"]) {
-      setPlayoff(data["playoff"]);
-    }
-    setMessage(data["msg"]);
+      if (data["success"]) {
+        const map = getHelper(data);
+        setPlayoff(map);
+      }
+      setMessage(data["msg"]);
   }
 
   async function post() {
@@ -66,8 +67,41 @@ function Login() {
       body: JSON.stringify({ userID: user }),
     });
     const data = await response.json();
-    console.log(data);
     setMessage(data["msg"]);
+  }
+
+  function getHelper(data) {
+    let map = {};
+    for (const [key, value] of Object.entries(data["playoff"][0])) {
+      let array = [
+        "firstEast",
+        "firstWest",
+        "quarterEast",
+        "quarterWest",
+        "semiEast",
+        "semiWest",
+        "finalEast",
+        "finalWest",
+        "Champion",
+      ];
+      let flag = true;
+      for (let i = 0; i < array.length; ++i) {
+        if (key.startsWith(array[i])) {
+          if (array[i] in map) {
+            map[array[i]].push(value);
+          } else {
+            map[array[i]] = [value];
+          }
+          flag = false;
+          break;
+        }
+      }
+
+      if (flag) {
+        map[key] = value;
+      }
+    }
+    return map;
   }
 
   // // Functions for writing it in two functions above in .then() format
@@ -151,14 +185,14 @@ function Login() {
               >
                 PUT
               </button>
-            <button
-              onClick={() => {
-                clickHandler("delete");
-              }}
-              type="button"
-            >
-              DELETE
-            </button>
+              <button
+                onClick={() => {
+                  clickHandler("delete");
+                }}
+                type="button"
+              >
+                DELETE
+              </button>
             </div>
           </div>
         </div>
