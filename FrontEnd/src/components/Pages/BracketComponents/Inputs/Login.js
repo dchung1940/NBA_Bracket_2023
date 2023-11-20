@@ -35,8 +35,8 @@ function Login() {
     const data = await response.json();
 
       if (data["success"]) {
-        const map = getHelper(data);
-        setPlayoff(map);
+        // const map = getHelper(data);
+        setPlayoff(data["playoff"]);
       }
       setMessage(data["msg"]);
   }
