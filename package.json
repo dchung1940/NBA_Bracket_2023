@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "mongoose": "^8.0.1",
-    "mysql2": "^3.6.1"
-  }
-}
